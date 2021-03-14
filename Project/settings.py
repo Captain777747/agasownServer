@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 import django_heroku
+import dj_database_url
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -200,14 +201,20 @@ WSGI_APPLICATION = 'Project.wsgi.application'
 #         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
 #     }
 # }
-DATABASES = {
-    'default': {
-        'ENGINE': 'djongo',
-        'NAME': 'ecommerce_db',
-        'HOST': '127.0.0.1',
-        'PORT': 27017,
-    }
-}
+#DATABASES = {
+#   'default': {
+#        'ENGINE': 'djongo',
+#        'NAME': 'ecommerce_db',
+#        'HOST': '127.0.0.1',
+#        'PORT': 27017,
+#    }
+#}
+
+ DATABASES = {
+      'default': dj_database_url.config(
+          default="mongodb+srv://ahmed:hqvjDXN0yrcBf67B@agasown.yyynt.mongodb.net/ecommerce_db?retryWrites=true&w=majority"
+      )
+  }
 
 
 # Password validation
