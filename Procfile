@@ -1,1 +1,1 @@
-web: gunicorn agasowncms.wsgi
+web: gunicorn gettingstarted.wsgi --log-file -
