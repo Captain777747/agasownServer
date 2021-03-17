@@ -201,20 +201,14 @@ WSGI_APPLICATION = 'Project.wsgi.application'
 #         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
 #     }
 # }
-#DATABASES = {
-#   'default': {
-#        'ENGINE': 'djongo',
-#        'NAME': 'ecommerce_db',
-#        'HOST': '127.0.0.1',
-#        'PORT': 27017,
-#    }
-#}
-
- DATABASES = {
-      'default': dj_database_url.config(
-          default="mongodb+srv://ahmed:hqvjDXN0yrcBf67B@agasown.yyynt.mongodb.net/ecommerce_db?retryWrites=true&w=majority"
-      )
-  }
+DATABASES = {
+    'default': {
+        'ENGINE': 'djongo',
+        'NAME': 'ecommerce_db',
+        'HOST': '127.0.0.1',
+        'PORT': 27017,
+    }
+}
 
 
 # Password validation

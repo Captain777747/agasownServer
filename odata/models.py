@@ -37,6 +37,7 @@ class Category(models.Model):
     objects = models.DjongoManager()
     id = models.AutoField(primary_key=True)
     category_name = models.CharField(max_length=100,null=True,blank=True)
+    parent_id=models.IntegerField()
     description = models.TextField(max_length=300,null=True,blank=True)
     picture = models.ImageField(null=True,blank=True, upload_to="images")
     active = models.BooleanField(default=False)
